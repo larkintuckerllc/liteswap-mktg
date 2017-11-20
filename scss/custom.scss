@@ -64,11 +64,17 @@ img.alignleft, img.alignright, img.aligncenter {
   color: $my-text-light;
   background-color: $my-primary;
 }
+.container--primary a {
+  color: $my-text-light;
+}
 .container--background {
   padding-top: 40px;
   padding-bottom: 40px;
   color: $my-text-dark;
   background-color: $my-background;
+}
+.container--background a {
+  color: $my-secondary-dark;
 }
 .container--primary-light {
   padding-top: 40px;
@@ -76,11 +82,17 @@ img.alignleft, img.alignright, img.aligncenter {
   color: $my-text-light;
   background-color: $my-primary-light;
 }
+.container--primary-light a {
+  color: $my-secondary-light;
+}
 .container--primary-alternative {
   padding-top: 40px;
   padding-bottom: 40px;
   color: $my-text-light;
   background-color: $my-primary-alternative;
+}
+.container--primary-alternative a {
+  color: $my-secondary-light;
 }
 #footer__root {
   display: flex;

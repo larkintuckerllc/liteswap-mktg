@@ -9,11 +9,11 @@
         </a>
       </div>
       <div id="footer__root__menu">
-        <ul id="footer__root__menu__list">
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
+        <?php wp_nav_menu( array(
+          'container' => 'false',
+          'theme_location' => 'footer',
+          'menu_id' => 'footer__root__menu__list'
+        ) ); ?>
       </div>
     </div>
     <?php wp_footer(); ?>

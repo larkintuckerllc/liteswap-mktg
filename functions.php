@@ -22,16 +22,19 @@ function mytheme_add_theme_scripts() {
 }
 function mytheme_register_my_menus() {
   register_nav_menu( 'header', __( 'Header' ) );
+  register_nav_menu( 'footer', __( 'Footer' ) );
 }
 function mytheme_nav_menu_css_class($classes, $item, $args) {
+  if ($args->theme_location != 'header') return $classes;
   $classes[] = 'nav-item';
   return $classes;
 }
-function mytheme_wp_nav_menu($ulclass) {
+function mytheme_wp_nav_menu($ulclass, $args) {
+  if ($args->theme_location != 'header') return $ulclass;
   return preg_replace( '/<a /', '<a class="nav-link"', $ulclass );
 }
 add_theme_support( 'post-thumbnails' );
 add_action( 'init', 'mytheme_register_my_menus' );
 add_action( 'wp_enqueue_scripts', 'mytheme_add_theme_scripts' );
 add_filter( 'nav_menu_css_class', 'mytheme_nav_menu_css_class', 10, 3 );
-add_filter( 'wp_nav_menu', 'mytheme_wp_nav_menu' );
+add_filter( 'wp_nav_menu', 'mytheme_wp_nav_menu', 10, 2 );

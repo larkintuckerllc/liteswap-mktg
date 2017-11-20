@@ -5905,11 +5905,17 @@ img.alignleft, img.alignright, img.aligncenter {
   color: #ffffff;
   background-color: #0a1a57; }
 
+.container--primary a {
+  color: #ffffff; }
+
 .container--background {
   padding-top: 40px;
   padding-bottom: 40px;
   color: #000000;
   background-color: #ffffff; }
+
+.container--background a {
+  color: #0064b7; }
 
 .container--primary-light {
   padding-top: 40px;
@@ -5917,11 +5923,17 @@ img.alignleft, img.alignright, img.aligncenter {
   color: #ffffff;
   background-color: #2485ed; }
 
+.container--primary-light a {
+  color: #64c1ff; }
+
 .container--primary-alternative {
   padding-top: 40px;
   padding-bottom: 40px;
   color: #ffffff;
   background-color: #37475e; }
+
+.container--primary-alternative a {
+  color: #64c1ff; }
 
 #footer__root {
   display: flex;
