@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "./node_modules/.bin/node-sass scss/custom.scss > style.css",
+    "build": "./node_modules/.bin/node-sass scss/custom.scss | ./node_modules/.bin/postcss > style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +23,8 @@
     "popper.js": "^1.12.9"
   },
   "devDependencies": {
-    "node-sass": "^4.7.1"
+    "autoprefixer": "^7.1.6",
+    "node-sass": "^4.7.1",
+    "postcss-cli": "^4.1.1"
   }
 }
