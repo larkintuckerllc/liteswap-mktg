@@ -1,0 +1,110 @@
+/*
+Theme Name: mytheme
+Theme URI: https://github.com/larkintuckerllc
+Author: John Tucker
+Author URI: https://github.com/larkintuckerllc
+Description: MyTheme
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Tags: mytheme
+Text Domain: mytheme
+This theme is for the mytheme site.
+*/
+
+/* COLORS */
+$my-primary: #0a1a57;
+$my-primary-light: #2485ed;
+$my-primary-dark: #0d1c41;
+$my-primary-alternative: #37475e;
+// TODO: FIX SECONDARY
+$my-secondary: #0091ea;
+$my-secondary-light: #64c1ff;
+$my-secondary-dark: #0064b7;
+$my-text-light: #ffffff;
+$my-text-dark: #000000;
+$my-background: #ffffff;
+
+/* BOOTSTRAP CUSTOMIZATIONS */
+$body-bg: $my-primary;
+$body-color: $my-text-light;
+$dark: $my-primary-dark;
+$navbar-dark-color: $my-text-light;
+$navbar-dark-hover-color: $my-text-light;
+$navbar-dark-active-color: $my-text-light;
+$navbar-dark-disabled-color: rgba($my-text-light,.25);
+
+/* BOOTSTRAP */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* WORDPRESS MINIMAL */
+img.alignleft, img.alignright, img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  height: auto;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  img.alignright {
+     float: right;
+     margin-left: 10px;
+  }
+  img.alignleft {
+     float: left;
+     margin-right: 10px;
+  }
+}
+
+/* CUSTOM */
+.container--primary {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $my-text-light;
+  background-color: $my-primary;
+}
+.container--background {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $my-text-dark;
+  background-color: $my-background;
+}
+.container--primary-light {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $my-text-light;
+  background-color: $my-primary-light;
+}
+.container--primary-alternative {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $my-text-light;
+  background-color: $my-primary-alternative;
+}
+#footer__root {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+#footer__root__brand {
+  display: none;
+}
+#footer__root__menu {
+  font-size: 0.85em;
+}
+#footer__root__menu__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#footer__root__menu__list li {
+  margin-top: 5px;
+}
+@include media-breakpoint-up(lg) {
+  #footer__root__brand {
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
